@@ -1,0 +1,416 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    padding: 15px 12%;
+    justify-content: space-between;
+    background: white;
+    position: relative;
+    z-index: 2000;
+}
+.transparent{
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+    height: 150vh;
+    background: url("../images/bg-pattern-intro-right-desktop.svg"), url("../images/bg-pattern-intro-left-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: right, left;
+    background-position-y: -15vh, 75vh;
+    background-size: 30%, 12%;
+}
+.navitems{
+    color: hsl(216, 15%, 60%);
+    margin-left: 15px;
+}
+.navitems:hover{
+    color: hsl(256, 26%, 20%);
+}
+h1,h2,h3{
+    font-family: 'DM Serif Display', serif;
+}
+h1{
+    font-size: 55px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Karla', sans-serif;
+    
+}
+a{
+    text-decoration: none;
+}
+.btn-white{
+    padding: 5px 15px;
+    color: hsl(256, 26%, 20%);
+    border: 2px solid black;
+}
+.btn-white:hover{
+    color:  hsl(0, 0%, 98%);
+    background-color: hsl(256, 26%, 20%);
+}
+.btn-black{
+    padding: 5px 15px;
+    border: 2px solid white;
+    color: white;
+}
+.btn-black:hover{
+    color: hsl(256, 26%, 20%);
+    background: white;
+}
+#mobilemenu{
+    display: none;
+}
+#sectionone{
+    height: 60vh;
+    padding: 60px 12%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(256, 26%, 20%);
+    color: white;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.sectiononetext{
+    width: 50%;
+    position: relative;
+}
+.sectiononetext .btn-black{
+    position: relative;
+    z-index: 100;
+}
+.sectiononetext::before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background: white;
+}
+.sectiononetext p{
+    margin-bottom: 40px;
+}
+.sectiononeimage{
+    width: 45%;
+    z-index: 1;
+}
+.sectiononetext .btn-black{
+    margin-top: 15px;
+}
+#secondsection{
+    padding: 150px 12%;
+}
+#secondsection h1{
+    position: relative;
+    padding: 5% 0;
+}
+#secondsection h1::before{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background: hsl(216, 15%, 60%);
+}
+#secondsection-items-cont{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.secondsection-items{
+    width: 30%;
+}
+.secondsection-items img{
+    width: 30%;
+}
+.secondsection-items p{
+    color: hsl(216, 15%, 60%);
+}
+#howwework{
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: hsl(256, 26%, 20%);
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-x: 45vw;
+}
+#howwework h2{
+    width: 50%;
+    margin: 0;
+    font-size: 45px;
+    color: white;
+}
+#howwework .btn-black{
+    padding-top: 10px;
+}
+footer{
+    padding: 20px 12%;
+    background: hsl(0, 0%, 98%);
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-y: -2vh;
+    background-size: 35%;
+}
+#footerhead{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(216, 15%, 60%);
+}
+.socialmedialinkscont{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.socialmedialinks:hover svg path{
+    fill: hsl(256, 26%, 20%);
+}
+#footerbody{
+    margin-top: 20px;
+    display: flex;
+}
+.footeritems{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.footeritems h3{
+    font-size: 12px;
+    margin-bottom: 25px;
+    color: hsl(216, 15%, 60%);
+}
+.footerlinks{
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: hsl(256, 26%, 20%);
+}
+.footerlinks:hover{
+    text-decoration: underline;
+}
+@media(max-width: 1000px){
+    #sectionone{
+        height: 70vh;
+        padding: 60px 12%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: hsl(256, 26%, 20%);
+        color: white;
+    }
+    .sectiononetext p{
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 800px){
+    header .btn-white{
+        display: none;
+    }
+}
+@media(max-width: 769px){
+    h1{
+    font-size: 35px;
+    }
+    p{
+        font-size: 13px;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+        
+    }
+    header.fixed{
+        position: fixed;
+        display: flex;
+        width: 76%;
+    }
+    header .btn-white{
+        width: 60%;
+        display: block;
+        border: 2px solid white;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .transparent{
+        position: absolute;
+        width: 100vw;
+        z-index: 10;
+        height: 170vh;
+        background: url("../images/bg-pattern-intro-right-mobile.svg"), url("../images/bg-pattern-intro-left-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position-x: 64vw, left;
+        background-position-y: bottom, 79vh;
+        display: flex;
+    }
+    nav{
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 48px;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: hsl(270, 9%, 17%);
+        background-image: url("../images/bg-pattern-mobile-nav.svg");
+        background-repeat: no-repeat;
+        background-position-y: 52vh;
+        background-position-x: -10vw;
+    }
+    nav.opennav{
+        display: flex;
+    }
+    #mobilemenu{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        background: url("../images/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 3000;
+    }
+    #mobilemenu.toggle{
+        background: url("../images/icon-close.svg");
+        background-size: cover;
+    }
+    .navitems{
+        color: white;
+        margin: 20px auto;
+    }
+    #sectionone{
+        height: auto;
+        padding:0 0 50px 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        background-color: hsl(256, 26%, 20%);
+        color: white;
+    }
+    .sectiononetext{
+        width: 90%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+    #secondsection{
+        padding: 150px 12%;
+    }
+    .sectiononetext::before{
+        position: absolute;
+        width: 0%;
+        height: 0px;
+        top: 0;
+        left: 0;
+        background: white;
+    }
+    .sectiononeimage{
+        width: 100%;
+        padding: 0;
+        z-index: 100;
+    }
+    #secondsection{
+        text-align: center;
+        padding: 150px 0;
+    }
+    #secondsection h1::before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        top: 0;
+        left: 25%;
+        background: hsl(216, 15%, 60%);
+    }
+    #secondsection-items-cont{
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .secondsection-items{
+        width: 90%;
+    
+    }
+    .secondsection-items img{
+        width: 30%;
+        margin: auto;
+    }
+    .secondsection-items p{
+        color: hsl(216, 15%, 60%);
+    }
+    #howwework{
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: hsl(256, 26%, 20%);
+        background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+        background-repeat: no-repeat;
+        background-position-x: 45vw;
+    }
+    #howwework h2{
+        width: 90%;
+        margin: 20px 0 20px 0;
+        font-size: 35px;
+        color: white;
+    }
+    footer{
+        padding: 20px 0;
+        background: hsl(0, 0%, 98%);
+        background-image: url("../images/bg-pattern-footer-desktop.svg");
+        background-repeat: no-repeat;
+        background-position-y: -2vh;
+        background-size: 35%;
+    }
+    #footerhead{
+        width: 90%;
+        margin: auto;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid hsl(216, 15%, 60%);
+    }
+    .socialmedialinkscont{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    #footerbody{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footeritems{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .footerlinks{
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: hsl(256, 26%, 20%);
+    }
+
+}
